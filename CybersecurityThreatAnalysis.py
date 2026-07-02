@@ -5,20 +5,29 @@ import matplotlib.pyplot as plt
 st.set_page_config(page_title="CyberShield Dashboard",page_icon="🛡️",layout="wide")
 st.markdown("""
 <style>
-.main{
-    background-color:#0E1117;
+.main {
+    background-color: #0E1117;
 }
-h1,h2,h3{
-    color:#00E5FF;
+h1, h2, h3 {
+    color: #00E5FF;
 }
-.stMetric{
-    background:#1B263B;
-    border-radius:10px;
-    padding:8px;
+/* Updated metric styling for proper visibility */
+.stMetric {
+    background: #1B263B;
+    border-radius: 10px;
+    padding: 8px;
 }
-footer{visibility:hidden;}
+/* Force metric text and labels to be clearly readable */
+.stMetric [data-testid="stMetricLabel"] {
+    color: #8A99AD !important;
+}
+.stMetric [data-testid="stMetricValue"] {
+    color: #FFFFFF !important;
+}
+footer {visibility: hidden;}
 </style>
 """, unsafe_allow_html=True)
+
 st.title("🛡 CyberShield Threat Analytics Dashboard")
 st.markdown("Monitor and analyze cybersecurity attacks using interactive visualizations.")
 @st.cache_data
