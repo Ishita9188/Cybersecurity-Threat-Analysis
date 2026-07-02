@@ -136,7 +136,7 @@ with tab1:
             y="Anomaly Scores",
             color="Severity Level",
             hover_data=["Attack Type"],
-            title="Threat Analysis"
+            
         )
         st.plotly_chart(scatter, use_container_width=True)
 with tab2:
